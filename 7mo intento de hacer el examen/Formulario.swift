@@ -8,12 +8,12 @@
 import SwiftUI
 
 struct Formulario: View{
-    let coreMD: PersistenceController
-    @State var id = 0
+    let coreDM: PersistenceController
+    @State var id = ""
     @State var nombre = ""
     @State var domicilio = ""
     @State var puesto = ""
-    @State var telefono = 0
+    @State var telefono = ""
     @State var activoOpc = ""
     @State var vacio = ""
     @State var seleccionado :Empleados?
@@ -23,29 +23,30 @@ struct Formulario: View{
             Spacer()
             VStack{
                 Spacer()
-                TextField("ID empleado", text: $vacio)
+                TextField("ID empleado", text: $id)
                     .keyboardType(.numberPad).textFieldStyle(RoundedBorderTextFieldStyle())
                 TextField("Nombre empleado", text: $nombre).textFieldStyle(RoundedBorderTextFieldStyle())
                 TextField("Domicilio empleado", text: $domicilio).textFieldStyle(RoundedBorderTextFieldStyle())
                 TextField("Puesto empleado", text: $puesto).textFieldStyle(RoundedBorderTextFieldStyle())
-                TextField("Telefono del empleado", text: $vacio)
+                TextField("Telefono del empleado", text: $telefono)
                     .keyboardType(.numberPad).textFieldStyle(RoundedBorderTextFieldStyle())
                 TextField("ActivoOPC", text: $activoOpc).textFieldStyle(RoundedBorderTextFieldStyle())
 
-                Button("Save") {
+                Button("Guardar") {
                     if( seleccionado != nil){
                         
-                        seleccionado?.precio = precio
-                        seleccionado?.codigo = codigo
+                        seleccionado?.id = Int16(id) ?? 0
                         seleccionado?.nombre = nombre
-                        coreDM.AP(producto: seleccionado!)
+                        seleccionado?.domicilio = domicilio
+                        seleccionado?.telefono = Int16(telefono) ?? 0
+                        seleccionado?.puesto = puesto
+                        seleccionado?.activoOpc = activoOpc
+                        coreDM.actualizarEmp(empleado: seleccionado!)
                     }
                     else{
-                    coreDM.GP(codigo: codigo, nombre: nombre, precio: precio)
+                        coreDM.guardarEmp(id: Int16(id) ?? 0, nombre: nombre, domicilio: domicilio, puesto: puesto, telefono: Int16(telefono) ?? 0, activoOpc: activoOpc)
                     }
-                    nombre = ""
-                    codigo = " "
-                    precio = " "
+                    
                     seleccionado = nil
                 }
                 Spacer()
@@ -53,6 +54,7 @@ struct Formulario: View{
             Spacer()
         }
     }
+    
 }
 
 

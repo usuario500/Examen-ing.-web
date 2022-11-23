@@ -8,48 +8,94 @@
 import CoreData
 
 struct PersistenceController {
-    static let shared = PersistenceController()
-
-    static var preview: PersistenceController = {
-        let result = PersistenceController(inMemory: true)
-        let viewContext = result.container.viewContext
-        for _ in 0..<10 {
-            let newItem = Item(context: viewContext)
-            newItem.timestamp = Date()
+    
+    let EmpC : NSPersistentContainer
+        
+        init(){
+            EmpC = NSPersistentContainer(name: "Empleado")
+            EmpC.loadPersistentStores(completionHandler: {
+                (descripcion, error) in
+                if let error = error {
+                    fatalError("Core data failed to iniciar \(error.localizedDescription)")
+                }
+            })
         }
-        do {
-            try viewContext.save()
-        } catch {
-            // Replace this implementation with code to handle the error appropriately.
-            // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-            let nsError = error as NSError
-            fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
-        }
-        return result
-    }()
-
-    let container: NSPersistentContainer
-
-    init(inMemory: Bool = false) {
-        container = NSPersistentContainer(name: "_mo_intento_de_hacer_el_examen")
-        if inMemory {
-            container.persistentStoreDescriptions.first!.url = URL(fileURLWithPath: "/dev/null")
-        }
-        container.loadPersistentStores(completionHandler: { (storeDescription, error) in
-            if let error = error as NSError? {
-                // Replace this implementation with code to handle the error appropriately.
-                // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-
-                /*
-                Typical reasons for an error here include:
-                * The parent directory does not exist, cannot be created, or disallows writing.
-                * The persistent store is not accessible, due to permissions or data protection when the device is locked.
-                * The device is out of space.
-                * The store could not be migrated to the current model version.
-                Check the error message to determine what the actual problem was.
-                */
-                fatalError("Unresolved error \(error), \(error.userInfo)")
+        
+    func guardarEmp(id: Int16, nombre:String, domicilio: String, puesto: String, telefono: Int16, activoOpc: String){
+            let empleado = Empleados(context: EmpC.viewContext)
+            empleado.id = id
+            empleado.nombre = nombre
+            empleado.domicilio = domicilio
+            empleado.puesto = puesto
+            empleado.telefono = telefono
+            empleado.activoOpc = activoOpc
+            
+            do{
+                try EmpC.viewContext.save()
+                print("se guardo")
+            }catch{
+                print("fallo")
             }
-        })
-    }
+        }
+        
+        func listaCompletaEmp() -> [Empleados]{
+            let fetchR : NSFetchRequest<Empleados> = Empleados.fetchRequest()
+            
+            do{
+                return try EmpC.viewContext.fetch(fetchR)
+            }
+            catch{
+                return []
+            }
+        }
+        
+        func listaEmp(codigo:String) -> Empleados?{
+            let fetchR : NSFetchRequest<Empleados> = Empleados.fetchRequest()
+            let predicate = NSPredicate(format: "codigo = %@", codigo)
+            fetchR.predicate = predicate
+            
+            do{
+                let datos = try EmpC.viewContext.fetch(fetchR)
+                return datos.first
+            }
+            catch{
+                print("dio error en \(error)")
+            }
+            return nil
+        }
+        
+        func borrarEmp(empleado: Empleados){
+            EmpC.viewContext.delete(empleado)
+            
+            do{
+                try EmpC.viewContext.save()
+            }
+            catch{
+                EmpC.viewContext.rollback()
+                print("fallo a la conexion \(error.localizedDescription)")
+            }
+        }
+        
+        func actualizarEmp(empleado: Empleados){
+            let fetchR : NSFetchRequest<Empleados> = Empleados.fetchRequest()
+            let predicate = NSPredicate(format: "id = %@", empleado.id )
+            fetchR.predicate = predicate
+            
+            
+            do{
+                let datos = try EmpC.viewContext.fetch(fetchR)
+                let e = datos.first
+                e?.nombre = empleado.nombre
+                e?.puesto = empleado.puesto
+                try EmpC.viewContext.save()
+                print("se guardo")
+            }
+            catch{
+                print("dio error en \(error)")
+            }
+            
+            
+            
+        }
+
 }
