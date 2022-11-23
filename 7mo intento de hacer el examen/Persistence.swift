@@ -7,7 +7,7 @@
 
 import CoreData
 
-struct PersistenceController {
+struct Persistencia {
     
     let EmpC : NSPersistentContainer
         

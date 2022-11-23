@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct Formulario: View{
-    let coreDM: PersistenceController
+    @State var coreDM: Persistencia
     @State var id = ""
     @State var nombre = ""
     @State var domicilio = ""
@@ -19,6 +19,7 @@ struct Formulario: View{
     @State var seleccionado :Empleados?
     
     var body: some View{
+        
         HStack{
             Spacer()
             VStack{
