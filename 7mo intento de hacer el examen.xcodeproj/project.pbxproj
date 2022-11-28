@@ -7,30 +7,30 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D37750E0292FCF9600473948 /* Actualizar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D37750DF292FCF9600473948 /* Actualizar.swift */; };
-		D3A5CC802926992B00E4F443 /* _mo_intento_de_hacer_el_examenApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A5CC7F2926992B00E4F443 /* _mo_intento_de_hacer_el_examenApp.swift */; };
-		D3A5CC822926992B00E4F443 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A5CC812926992B00E4F443 /* ContentView.swift */; };
-		D3A5CC842926992C00E4F443 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3A5CC832926992C00E4F443 /* Assets.xcassets */; };
-		D3A5CC872926992C00E4F443 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3A5CC862926992C00E4F443 /* Preview Assets.xcassets */; };
-		D3A5CC892926992C00E4F443 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A5CC882926992C00E4F443 /* Persistence.swift */; };
-		D3A5CC8C2926992C00E4F443 /* _mo_intento_de_hacer_el_examen.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D3A5CC8A2926992C00E4F443 /* _mo_intento_de_hacer_el_examen.xcdatamodeld */; };
-		D3A5CC93292699F100E4F443 /* Formulario.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A5CC92292699F100E4F443 /* Formulario.swift */; };
+		D39BC4E72931257D0052A62E /* _mo_intento_de_hacer_el_examenApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39BC4E62931257D0052A62E /* _mo_intento_de_hacer_el_examenApp.swift */; };
+		D39BC4E92931257D0052A62E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39BC4E82931257D0052A62E /* ContentView.swift */; };
+		D39BC4EB2931257E0052A62E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D39BC4EA2931257E0052A62E /* Assets.xcassets */; };
+		D39BC4EE2931257E0052A62E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D39BC4ED2931257E0052A62E /* Preview Assets.xcassets */; };
+		D39BC4F5293127300052A62E /* Formulario.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39BC4F4293127300052A62E /* Formulario.swift */; };
+		D39BC4F82931274B0052A62E /* Persistence.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D39BC4F62931274B0052A62E /* Persistence.xcdatamodeld */; };
+		D39BC4FA293127CD0052A62E /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39BC4F9293127CD0052A62E /* Persistence.swift */; };
+		D39BC4FC29313CD50052A62E /* Actualizar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39BC4FB29313CD50052A62E /* Actualizar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		D37750DF292FCF9600473948 /* Actualizar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Actualizar.swift; sourceTree = "<group>"; };
-		D3A5CC7C2926992B00E4F443 /* 7mo intento de hacer el examen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "7mo intento de hacer el examen.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		D3A5CC7F2926992B00E4F443 /* _mo_intento_de_hacer_el_examenApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _mo_intento_de_hacer_el_examenApp.swift; sourceTree = "<group>"; };
-		D3A5CC812926992B00E4F443 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		D3A5CC832926992C00E4F443 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		D3A5CC862926992C00E4F443 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		D3A5CC882926992C00E4F443 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
-		D3A5CC8B2926992C00E4F443 /* _mo_intento_de_hacer_el_examen.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = _mo_intento_de_hacer_el_examen.xcdatamodel; sourceTree = "<group>"; };
-		D3A5CC92292699F100E4F443 /* Formulario.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Formulario.swift; sourceTree = "<group>"; };
+		D39BC4E32931257D0052A62E /* 7mo intento de hacer el examen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "7mo intento de hacer el examen.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D39BC4E62931257D0052A62E /* _mo_intento_de_hacer_el_examenApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _mo_intento_de_hacer_el_examenApp.swift; sourceTree = "<group>"; };
+		D39BC4E82931257D0052A62E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		D39BC4EA2931257E0052A62E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D39BC4ED2931257E0052A62E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		D39BC4F4293127300052A62E /* Formulario.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Formulario.swift; sourceTree = "<group>"; };
+		D39BC4F72931274B0052A62E /* Persistence.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Persistence.xcdatamodel; sourceTree = "<group>"; };
+		D39BC4F9293127CD0052A62E /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		D39BC4FB29313CD50052A62E /* Actualizar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Actualizar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		D3A5CC792926992B00E4F443 /* Frameworks */ = {
+		D39BC4E02931257D0052A62E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -40,41 +40,41 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		D3A5CC732926992B00E4F443 = {
+		D39BC4DA2931257D0052A62E = {
 			isa = PBXGroup;
 			children = (
-				D3A5CC7E2926992B00E4F443 /* 7mo intento de hacer el examen */,
-				D3A5CC7D2926992B00E4F443 /* Products */,
+				D39BC4E52931257D0052A62E /* 7mo intento de hacer el examen */,
+				D39BC4E42931257D0052A62E /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		D3A5CC7D2926992B00E4F443 /* Products */ = {
+		D39BC4E42931257D0052A62E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D3A5CC7C2926992B00E4F443 /* 7mo intento de hacer el examen.app */,
+				D39BC4E32931257D0052A62E /* 7mo intento de hacer el examen.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		D3A5CC7E2926992B00E4F443 /* 7mo intento de hacer el examen */ = {
+		D39BC4E52931257D0052A62E /* 7mo intento de hacer el examen */ = {
 			isa = PBXGroup;
 			children = (
-				D3A5CC7F2926992B00E4F443 /* _mo_intento_de_hacer_el_examenApp.swift */,
-				D3A5CC812926992B00E4F443 /* ContentView.swift */,
-				D3A5CC832926992C00E4F443 /* Assets.xcassets */,
-				D3A5CC882926992C00E4F443 /* Persistence.swift */,
-				D3A5CC8A2926992C00E4F443 /* _mo_intento_de_hacer_el_examen.xcdatamodeld */,
-				D3A5CC852926992C00E4F443 /* Preview Content */,
-				D3A5CC92292699F100E4F443 /* Formulario.swift */,
-				D37750DF292FCF9600473948 /* Actualizar.swift */,
+				D39BC4E62931257D0052A62E /* _mo_intento_de_hacer_el_examenApp.swift */,
+				D39BC4E82931257D0052A62E /* ContentView.swift */,
+				D39BC4F4293127300052A62E /* Formulario.swift */,
+				D39BC4FB29313CD50052A62E /* Actualizar.swift */,
+				D39BC4F62931274B0052A62E /* Persistence.xcdatamodeld */,
+				D39BC4F9293127CD0052A62E /* Persistence.swift */,
+				D39BC4EA2931257E0052A62E /* Assets.xcassets */,
+				D39BC4EC2931257E0052A62E /* Preview Content */,
 			);
 			path = "7mo intento de hacer el examen";
 			sourceTree = "<group>";
 		};
-		D3A5CC852926992C00E4F443 /* Preview Content */ = {
+		D39BC4EC2931257E0052A62E /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
-				D3A5CC862926992C00E4F443 /* Preview Assets.xcassets */,
+				D39BC4ED2931257E0052A62E /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -82,13 +82,13 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		D3A5CC7B2926992B00E4F443 /* 7mo intento de hacer el examen */ = {
+		D39BC4E22931257D0052A62E /* 7mo intento de hacer el examen */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D3A5CC8F2926992C00E4F443 /* Build configuration list for PBXNativeTarget "7mo intento de hacer el examen" */;
+			buildConfigurationList = D39BC4F12931257E0052A62E /* Build configuration list for PBXNativeTarget "7mo intento de hacer el examen" */;
 			buildPhases = (
-				D3A5CC782926992B00E4F443 /* Sources */,
-				D3A5CC792926992B00E4F443 /* Frameworks */,
-				D3A5CC7A2926992B00E4F443 /* Resources */,
+				D39BC4DF2931257D0052A62E /* Sources */,
+				D39BC4E02931257D0052A62E /* Frameworks */,
+				D39BC4E12931257D0052A62E /* Resources */,
 			);
 			buildRules = (
 			);
@@ -96,25 +96,25 @@
 			);
 			name = "7mo intento de hacer el examen";
 			productName = "7mo intento de hacer el examen";
-			productReference = D3A5CC7C2926992B00E4F443 /* 7mo intento de hacer el examen.app */;
+			productReference = D39BC4E32931257D0052A62E /* 7mo intento de hacer el examen.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		D3A5CC742926992B00E4F443 /* Project object */ = {
+		D39BC4DB2931257D0052A62E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1310;
 				LastUpgradeCheck = 1310;
 				TargetAttributes = {
-					D3A5CC7B2926992B00E4F443 = {
+					D39BC4E22931257D0052A62E = {
 						CreatedOnToolsVersion = 13.1;
 					};
 				};
 			};
-			buildConfigurationList = D3A5CC772926992B00E4F443 /* Build configuration list for PBXProject "7mo intento de hacer el examen" */;
+			buildConfigurationList = D39BC4DE2931257D0052A62E /* Build configuration list for PBXProject "7mo intento de hacer el examen" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -122,46 +122,46 @@
 				en,
 				Base,
 			);
-			mainGroup = D3A5CC732926992B00E4F443;
-			productRefGroup = D3A5CC7D2926992B00E4F443 /* Products */;
+			mainGroup = D39BC4DA2931257D0052A62E;
+			productRefGroup = D39BC4E42931257D0052A62E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				D3A5CC7B2926992B00E4F443 /* 7mo intento de hacer el examen */,
+				D39BC4E22931257D0052A62E /* 7mo intento de hacer el examen */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		D3A5CC7A2926992B00E4F443 /* Resources */ = {
+		D39BC4E12931257D0052A62E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D3A5CC872926992C00E4F443 /* Preview Assets.xcassets in Resources */,
-				D3A5CC842926992C00E4F443 /* Assets.xcassets in Resources */,
+				D39BC4EE2931257E0052A62E /* Preview Assets.xcassets in Resources */,
+				D39BC4EB2931257E0052A62E /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		D3A5CC782926992B00E4F443 /* Sources */ = {
+		D39BC4DF2931257D0052A62E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D3A5CC93292699F100E4F443 /* Formulario.swift in Sources */,
-				D3A5CC892926992C00E4F443 /* Persistence.swift in Sources */,
-				D3A5CC8C2926992C00E4F443 /* _mo_intento_de_hacer_el_examen.xcdatamodeld in Sources */,
-				D37750E0292FCF9600473948 /* Actualizar.swift in Sources */,
-				D3A5CC822926992B00E4F443 /* ContentView.swift in Sources */,
-				D3A5CC802926992B00E4F443 /* _mo_intento_de_hacer_el_examenApp.swift in Sources */,
+				D39BC4F5293127300052A62E /* Formulario.swift in Sources */,
+				D39BC4F82931274B0052A62E /* Persistence.xcdatamodeld in Sources */,
+				D39BC4E92931257D0052A62E /* ContentView.swift in Sources */,
+				D39BC4FC29313CD50052A62E /* Actualizar.swift in Sources */,
+				D39BC4E72931257D0052A62E /* _mo_intento_de_hacer_el_examenApp.swift in Sources */,
+				D39BC4FA293127CD0052A62E /* Persistence.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		D3A5CC8D2926992C00E4F443 /* Debug */ = {
+		D39BC4EF2931257E0052A62E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -222,7 +222,7 @@
 			};
 			name = Debug;
 		};
-		D3A5CC8E2926992C00E4F443 /* Release */ = {
+		D39BC4F02931257E0052A62E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -277,7 +277,7 @@
 			};
 			name = Release;
 		};
-		D3A5CC902926992C00E4F443 /* Debug */ = {
+		D39BC4F22931257E0052A62E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -305,7 +305,7 @@
 			};
 			name = Debug;
 		};
-		D3A5CC912926992C00E4F443 /* Release */ = {
+		D39BC4F32931257E0052A62E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -336,20 +336,20 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		D3A5CC772926992B00E4F443 /* Build configuration list for PBXProject "7mo intento de hacer el examen" */ = {
+		D39BC4DE2931257D0052A62E /* Build configuration list for PBXProject "7mo intento de hacer el examen" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				D3A5CC8D2926992C00E4F443 /* Debug */,
-				D3A5CC8E2926992C00E4F443 /* Release */,
+				D39BC4EF2931257E0052A62E /* Debug */,
+				D39BC4F02931257E0052A62E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D3A5CC8F2926992C00E4F443 /* Build configuration list for PBXNativeTarget "7mo intento de hacer el examen" */ = {
+		D39BC4F12931257E0052A62E /* Build configuration list for PBXNativeTarget "7mo intento de hacer el examen" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				D3A5CC902926992C00E4F443 /* Debug */,
-				D3A5CC912926992C00E4F443 /* Release */,
+				D39BC4F22931257E0052A62E /* Debug */,
+				D39BC4F32931257E0052A62E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -357,17 +357,17 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		D3A5CC8A2926992C00E4F443 /* _mo_intento_de_hacer_el_examen.xcdatamodeld */ = {
+		D39BC4F62931274B0052A62E /* Persistence.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				D3A5CC8B2926992C00E4F443 /* _mo_intento_de_hacer_el_examen.xcdatamodel */,
+				D39BC4F72931274B0052A62E /* Persistence.xcdatamodel */,
 			);
-			currentVersion = D3A5CC8B2926992C00E4F443 /* _mo_intento_de_hacer_el_examen.xcdatamodel */;
-			path = _mo_intento_de_hacer_el_examen.xcdatamodeld;
+			currentVersion = D39BC4F72931274B0052A62E /* Persistence.xcdatamodel */;
+			path = Persistence.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
 /* End XCVersionGroup section */
 	};
-	rootObject = D3A5CC742926992B00E4F443 /* Project object */;
+	rootObject = D39BC4DB2931257D0052A62E /* Project object */;
 }

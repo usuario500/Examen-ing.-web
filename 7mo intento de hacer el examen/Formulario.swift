@@ -2,7 +2,7 @@
 //  Formulario.swift
 //  7mo intento de hacer el examen
 //
-//  Created by CCDM03 on 17/11/22.
+//  Created by CCDM03 on 25/11/22.
 //
 
 import SwiftUI
@@ -20,9 +20,7 @@ struct Formulario: View{
     var body: some View{
         
         HStack{
-            Spacer()
             VStack{
-                Spacer()
                 TextField("ID empleado", text: $id)
                     .keyboardType(.numberPad).textFieldStyle(RoundedBorderTextFieldStyle())
                 TextField("Nombre empleado", text: $nombre).textFieldStyle(RoundedBorderTextFieldStyle())
@@ -31,11 +29,12 @@ struct Formulario: View{
                 TextField("Telefono del empleado", text: $telefono)
                     .keyboardType(.numberPad).textFieldStyle(RoundedBorderTextFieldStyle())
                 TextField("ActivoOPC", text: $activoOpc).textFieldStyle(RoundedBorderTextFieldStyle())
-
-                Button("Guardar") {
-                        coreDM.guardarEmp(id: Int16(id) ?? 0, nombre: nombre, domicilio: domicilio, puesto: puesto, telefono: Int16(telefono) ?? 0, activoOpc: activoOpc)
+                NavigationView{
+                    Button("Guardar") {
+                        coreDM.guardarEmp(id: id, nombre: nombre, domicilio: domicilio, puesto: puesto, telefono: telefono, activoOpc: activoOpc)
+                        }
+                        
                     }
-                    
                 }
                 Spacer()
             }
@@ -44,7 +43,7 @@ struct Formulario: View{
 }
 struct ContentView_Previews2: PreviewProvider {
     static var previews: some View {
-        Formulario(coreDM: Persistencia(), id: " ", nombre: " ", domicilio: " ", puesto: "", telefono: " ", activoOpc: "", vacio: " ")
+        Formulario(coreDM: Persistencia())
     }
 }
 

@@ -2,7 +2,7 @@
 //  Persistence.swift
 //  7mo intento de hacer el examen
 //
-//  Created by CCDM03 on 17/11/22.
+//  Created by CCDM03 on 25/11/22.
 //
 
 import CoreData
@@ -13,7 +13,7 @@ struct Persistencia {
     let EmpC : NSPersistentContainer
         
         init(){
-            EmpC = NSPersistentContainer(name: "Empleado")
+            EmpC = NSPersistentContainer(name: "Persistence")
             EmpC.loadPersistentStores(completionHandler: {
                 (descripcion, error) in
                 if let error = error {
@@ -22,13 +22,13 @@ struct Persistencia {
             })
         }
         
-    func guardarEmp(id: Int16, nombre:String, domicilio: String, puesto: String, telefono: Int16, activoOpc: String){
+    func guardarEmp(id: String, nombre:String, domicilio: String, puesto: String, telefono: String, activoOpc: String){
             let empleado = Empleados(context: EmpC.viewContext)
-            empleado.id = id
+            empleado.id = Int16(id) ?? 0
             empleado.nombre = nombre
             empleado.domicilio = domicilio
             empleado.puesto = puesto
-            empleado.telefono = telefono
+            empleado.telefono = Int16(telefono) ?? 0
             empleado.activoOpc = activoOpc
             
             do{
