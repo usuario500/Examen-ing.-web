@@ -11,7 +11,7 @@ import SwiftUI
 struct _mo_intento_de_hacer_el_examenApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView(coreDM: Persistencia())
         }
     }
 }

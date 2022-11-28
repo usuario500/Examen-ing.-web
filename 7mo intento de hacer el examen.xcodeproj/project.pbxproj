@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D37750E0292FCF9600473948 /* Actualizar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D37750DF292FCF9600473948 /* Actualizar.swift */; };
 		D3A5CC802926992B00E4F443 /* _mo_intento_de_hacer_el_examenApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A5CC7F2926992B00E4F443 /* _mo_intento_de_hacer_el_examenApp.swift */; };
 		D3A5CC822926992B00E4F443 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A5CC812926992B00E4F443 /* ContentView.swift */; };
 		D3A5CC842926992C00E4F443 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3A5CC832926992C00E4F443 /* Assets.xcassets */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D37750DF292FCF9600473948 /* Actualizar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Actualizar.swift; sourceTree = "<group>"; };
 		D3A5CC7C2926992B00E4F443 /* 7mo intento de hacer el examen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "7mo intento de hacer el examen.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3A5CC7F2926992B00E4F443 /* _mo_intento_de_hacer_el_examenApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _mo_intento_de_hacer_el_examenApp.swift; sourceTree = "<group>"; };
 		D3A5CC812926992B00E4F443 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -64,6 +66,7 @@
 				D3A5CC8A2926992C00E4F443 /* _mo_intento_de_hacer_el_examen.xcdatamodeld */,
 				D3A5CC852926992C00E4F443 /* Preview Content */,
 				D3A5CC92292699F100E4F443 /* Formulario.swift */,
+				D37750DF292FCF9600473948 /* Actualizar.swift */,
 			);
 			path = "7mo intento de hacer el examen";
 			sourceTree = "<group>";
@@ -149,6 +152,7 @@
 				D3A5CC93292699F100E4F443 /* Formulario.swift in Sources */,
 				D3A5CC892926992C00E4F443 /* Persistence.swift in Sources */,
 				D3A5CC8C2926992C00E4F443 /* _mo_intento_de_hacer_el_examen.xcdatamodeld in Sources */,
+				D37750E0292FCF9600473948 /* Actualizar.swift in Sources */,
 				D3A5CC822926992B00E4F443 /* ContentView.swift in Sources */,
 				D3A5CC802926992B00E4F443 /* _mo_intento_de_hacer_el_examenApp.swift in Sources */,
 			);

@@ -9,22 +9,26 @@ import SwiftUI
 import CoreData
 
 struct ContentView: View {
-    @State var empleados: FetchedResults<Empleados>
-
+    
+    let coreDM: Persistencia
+    @State var prodArray = [Empleados]()
     var body: some View {
         NavigationView {
-            List {
-                ForEach(empleados) { empleados in
+            List{
+                ForEach(prodArray, id: \.self){
+                    emp in
+                    VStack{
+                        
+                    }
                     
                 }
-                //.onDelete(perform: deleteItems)
             }
+            Spacer()
+        }
+        .padding()
             .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    EditButton()
-                }
                 ToolbarItem {
-                    NavigationLink( destination: Formulario(coreDM: Persistencia){
+                    NavigationLink(destination: Formulario(coreDM: Persistencia(), id: " ", nombre: " ", domicilio: " ", puesto: "", telefono: " ", activoOpc: "", vacio: " ")){
                         Text("Nuevo empleado")
                     }
                 }
@@ -33,11 +37,11 @@ struct ContentView: View {
         }
     }
 
-}
-
-
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView(empleados: <#FetchedResults<Empleados>#>)
+        ContentView(coreDM:Persistencia())
     }
 }
+
+
+

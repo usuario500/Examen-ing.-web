@@ -8,6 +8,7 @@
 import CoreData
 
 struct Persistencia {
+    static let shared = Persistencia()
     
     let EmpC : NSPersistentContainer
         
