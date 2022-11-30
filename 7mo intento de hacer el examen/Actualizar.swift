@@ -9,19 +9,16 @@ import SwiftUI
 
 struct Actualizar: View{
     @State var coreDM: Persistencia
-    @State var id = ""
-    @State var nombre = ""
-    @State var domicilio = ""
-    @State var puesto = ""
-    @State var telefono = ""
-    @State var activoOpc = ""
-    @State var vacio = ""
-    
+    @State var id: String
+    @State var nombre: String 
+    @State var domicilio: String
+    @State var puesto: String
+    @State var telefono: String
+    @State var activoOpc: String
     var body: some View{
-        
         HStack{
             VStack{
-                TextField("ID empleado", text: $id)
+                TextField("ID del empleado", text: $id)
                     .keyboardType(.numberPad).textFieldStyle(RoundedBorderTextFieldStyle())
                 TextField("Nombre empleado", text: $nombre).textFieldStyle(RoundedBorderTextFieldStyle())
                 TextField("Domicilio empleado", text: $domicilio).textFieldStyle(RoundedBorderTextFieldStyle())
@@ -30,12 +27,19 @@ struct Actualizar: View{
                     .keyboardType(.numberPad).textFieldStyle(RoundedBorderTextFieldStyle())
                 TextField("ActivoOPC", text: $activoOpc).textFieldStyle(RoundedBorderTextFieldStyle())
                 NavigationView{
-                    Button("Guardar") {
-                        coreDM.guardarEmp(id: id, nombre: nombre, domicilio: domicilio, puesto: puesto, telefono: telefono, activoOpc: activoOpc)
+                    Button("Actualizar") {
+                        coreDM.actualizarEmp(id: Int16(id) ?? 0, nombre: nombre, domicilio: domicilio, puesto: puesto, telefono: telefono, activoOpc: activoOpc)
                         }
                         
                     }
-                }
+            }/*.onAppear(perform: {
+                id = seleccionado?.id ?? 0
+                nombre = seleccionado?.nombre ?? "kasjdhkjsad"
+                domicilio = seleccionado?.domicilio ?? " kudfahks"
+                puesto = seleccionado?.puesto ?? " ffdsf"
+                telefono = String(seleccionado?.telefono ?? 0)
+                activoOpc = seleccionado?.activoOpc ?? " sadfdaff"
+            })*/
                 Spacer()
             }
             Spacer()
@@ -43,6 +47,6 @@ struct Actualizar: View{
 }
 struct ContentView_Previews3: PreviewProvider {
     static var previews: some View {
-        Actualizar(coreDM: Persistencia(), id: " ", nombre: " ", domicilio: " ", puesto: "", telefono: " ", activoOpc: "", vacio: " ")
+        Actualizar(coreDM: Persistencia(), id: "", nombre: "", domicilio: "", puesto: " ", telefono: " ", activoOpc: " ")
     }
 }

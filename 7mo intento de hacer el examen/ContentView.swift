@@ -12,13 +12,7 @@ struct ContentView: View {
     
     let coreDM: Persistencia
     @State var prodArray = [Empleados]()
-    @State var seleccionado :Empleados?
-    @State var id = ""
-    @State var nombre = ""
-    @State var domicilio = ""
-    @State var puesto = ""
-    @State var telefono = ""
-    @State var activoOpc = ""
+
     var body: some View {
         
         VStack{
@@ -29,24 +23,30 @@ struct ContentView: View {
                     ForEach(prodArray, id: \.self){
                         emp in
                         VStack{
-                            Text("\(Int16(emp.id))")
+                            Text("\(emp.id)" )
                             Text(emp.nombre ?? " ")
                             Text(emp.domicilio ?? " ")
                             Text(emp.puesto ?? " ")
-                            Text("\(emp.telefono)")
+                            Text(String(emp.telefono) )
                             Text(emp.activoOpc ?? "")
-                        }.onTapGesture{
-                            seleccionado = emp
-                            nombre = emp.nombre ?? " "
-                            domicilio = emp.domicilio ?? " "
-                            puesto = emp.puesto ?? " "
-                            activoOpc = emp.activoOpc ?? ""
+                            NavigationLink(destination: Actualizar(coreDM: Persistencia(), id: String(emp.id) , nombre: String(emp.nombre ?? " "), domicilio: emp.domicilio ?? "", puesto: emp.puesto ?? "", telefono: String(emp.telefono) , activoOpc: emp.activoOpc ?? " " )){
+                                Text("Actualizar")
+                            }
                         }
                         
-                    }
+                    }.onDelete(perform: {
+                        index in
+                        index.forEach({
+                            index in
+                            let empleado = prodArray[index]
+                            coreDM.borrarEmp(empleado: empleado)
+                            mostrarEmp()
+                        })
+                    })
+                    
                 }.toolbar {
                     ToolbarItem(placement: .navigationBarTrailing) {
-                        NavigationLink(destination: Formulario(coreDM: Persistencia(), id: " ", nombre: " ", domicilio: " ", puesto: "", telefono: " ", activoOpc: "", vacio: " ")){
+                        NavigationLink(destination: Formulario(coreDM: Persistencia())){
                             Text("Nuevo empleado")
                         }
                     }
@@ -55,6 +55,7 @@ struct ContentView: View {
             }
             .padding()
                 Text("Selecciona un empleado")
+            
         }.padding()
             .onAppear(perform: {mostrarEmp()})
         

@@ -77,26 +77,30 @@ struct Persistencia {
             }
         }
         
-        func actualizarEmp(empleado: Empleados){
+        func actualizarEmp(id: Int16, nombre:String, domicilio: String, puesto: String, telefono: String, activoOpc: String){
             let fetchR : NSFetchRequest<Empleados> = Empleados.fetchRequest()
-            let predicate = NSPredicate(format: "id = %@", empleado.id )
+            let predicate = NSPredicate(format: "id = %@",id )
             fetchR.predicate = predicate
             
             
             do{
                 let datos = try EmpC.viewContext.fetch(fetchR)
                 let e = datos.first
-                e?.nombre = empleado.nombre
-                e?.puesto = empleado.puesto
+                e?.id = Int16(id) 
+                e?.nombre = nombre
+                e?.domicilio = domicilio
+                e?.puesto = puesto
+                e?.telefono = Int16(telefono) ?? 0
+                e?.activoOpc = activoOpc
                 try EmpC.viewContext.save()
                 print("se guardo")
             }
             catch{
                 print("dio error en \(error)")
             }
-            
-            
-            
-        }
+                
+                
+                
+            }
 
 }

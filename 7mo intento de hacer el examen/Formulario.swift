@@ -3,7 +3,7 @@
 //  7mo intento de hacer el examen
 //
 //  Created by CCDM03 on 25/11/22.
-//
+// 
 
 import SwiftUI
 
@@ -15,7 +15,6 @@ struct Formulario: View{
     @State var puesto = ""
     @State var telefono = ""
     @State var activoOpc = ""
-    @State var vacio = ""
     
     var body: some View{
         
