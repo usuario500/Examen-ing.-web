@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-
+ 
 struct Actualizar: View{
     @State var coreDM: Persistencia
     @State var id: String
@@ -15,11 +15,10 @@ struct Actualizar: View{
     @State var puesto: String
     @State var telefono: String
     @State var activoOpc: String
+    @State var prodArray = [Empleados]()
     var body: some View{
         HStack{
             VStack{
-                TextField("ID del empleado", text: $id)
-                    .keyboardType(.numberPad).textFieldStyle(RoundedBorderTextFieldStyle())
                 TextField("Nombre empleado", text: $nombre).textFieldStyle(RoundedBorderTextFieldStyle())
                 TextField("Domicilio empleado", text: $domicilio).textFieldStyle(RoundedBorderTextFieldStyle())
                 TextField("Puesto empleado", text: $puesto).textFieldStyle(RoundedBorderTextFieldStyle())
@@ -28,22 +27,28 @@ struct Actualizar: View{
                 TextField("ActivoOPC", text: $activoOpc).textFieldStyle(RoundedBorderTextFieldStyle())
                 NavigationView{
                     Button("Actualizar") {
-                        coreDM.actualizarEmp(id: Int16(id) ?? 0, nombre: nombre, domicilio: domicilio, puesto: puesto, telefono: telefono, activoOpc: activoOpc)
+                        coreDM.actualizarEmp(id: id, nombre: nombre, domicilio: domicilio, puesto: puesto, telefono: telefono, activoOpc: activoOpc)
+                       
+                        id = " "
+                        nombre = " "
+                        domicilio = " "
+                        puesto = " "
+                        telefono = ""
+                        activoOpc = " "
                         }
                         
                     }
-            }/*.onAppear(perform: {
-                id = seleccionado?.id ?? 0
-                nombre = seleccionado?.nombre ?? "kasjdhkjsad"
-                domicilio = seleccionado?.domicilio ?? " kudfahks"
-                puesto = seleccionado?.puesto ?? " ffdsf"
-                telefono = String(seleccionado?.telefono ?? 0)
-                activoOpc = seleccionado?.activoOpc ?? " sadfdaff"
-            })*/
+            }.onAppear(perform: {
+                mostrarEmp()
+            })
                 Spacer()
             }
             Spacer()
         }
+    func mostrarEmp(){
+        prodArray = coreDM.listaCompletaEmp()
+    }
+    
 }
 struct ContentView_Previews3: PreviewProvider {
     static var previews: some View {

@@ -24,11 +24,11 @@ struct Persistencia {
         
     func guardarEmp(id: String, nombre:String, domicilio: String, puesto: String, telefono: String, activoOpc: String){
             let empleado = Empleados(context: EmpC.viewContext)
-            empleado.id = Int16(id) ?? 0
+            empleado.id = id
             empleado.nombre = nombre
             empleado.domicilio = domicilio
             empleado.puesto = puesto
-            empleado.telefono = Int16(telefono) ?? 0
+            empleado.telefono = telefono
             empleado.activoOpc = activoOpc
             
             do{
@@ -77,7 +77,7 @@ struct Persistencia {
             }
         }
         
-        func actualizarEmp(id: Int16, nombre:String, domicilio: String, puesto: String, telefono: String, activoOpc: String){
+        func actualizarEmp(id: String, nombre:String, domicilio: String, puesto: String, telefono: String, activoOpc: String){
             let fetchR : NSFetchRequest<Empleados> = Empleados.fetchRequest()
             let predicate = NSPredicate(format: "id = %@",id )
             fetchR.predicate = predicate
@@ -86,14 +86,14 @@ struct Persistencia {
             do{
                 let datos = try EmpC.viewContext.fetch(fetchR)
                 let e = datos.first
-                e?.id = Int16(id) 
+                e?.id = id
                 e?.nombre = nombre
                 e?.domicilio = domicilio
                 e?.puesto = puesto
-                e?.telefono = Int16(telefono) ?? 0
+                e?.telefono = telefono
                 e?.activoOpc = activoOpc
                 try EmpC.viewContext.save()
-                print("se guardo")
+                print("se actualizo")
             }
             catch{
                 print("dio error en \(error)")

@@ -14,7 +14,7 @@ struct ContentView: View {
     @State var prodArray = [Empleados]()
 
     var body: some View {
-        
+         
         VStack{
             NavigationView{
                 
@@ -23,13 +23,13 @@ struct ContentView: View {
                     ForEach(prodArray, id: \.self){
                         emp in
                         VStack{
-                            Text("\(emp.id)" )
+                            Text(emp.id ?? " " )
                             Text(emp.nombre ?? " ")
                             Text(emp.domicilio ?? " ")
                             Text(emp.puesto ?? " ")
-                            Text(String(emp.telefono) )
+                            Text(emp.telefono ?? " " )
                             Text(emp.activoOpc ?? "")
-                            NavigationLink(destination: Actualizar(coreDM: Persistencia(), id: String(emp.id) , nombre: String(emp.nombre ?? " "), domicilio: emp.domicilio ?? "", puesto: emp.puesto ?? "", telefono: String(emp.telefono) , activoOpc: emp.activoOpc ?? " " )){
+                            NavigationLink(destination: Actualizar(coreDM: Persistencia(), id: emp.id ?? " " , nombre: String(emp.nombre ?? " "), domicilio: emp.domicilio ?? "", puesto: emp.puesto ?? "", telefono: emp.telefono ?? " " , activoOpc: emp.activoOpc ?? " " )){
                                 Text("Actualizar")
                             }
                         }

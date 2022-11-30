@@ -15,6 +15,7 @@ struct Formulario: View{
     @State var puesto = ""
     @State var telefono = ""
     @State var activoOpc = ""
+    @State var prodArray = [Empleados]()
     
     var body: some View{
         
@@ -31,6 +32,13 @@ struct Formulario: View{
                 NavigationView{
                     Button("Guardar") {
                         coreDM.guardarEmp(id: id, nombre: nombre, domicilio: domicilio, puesto: puesto, telefono: telefono, activoOpc: activoOpc)
+                        mostrarEmp()
+                        id = " "
+                        nombre = " "
+                        domicilio = " "
+                        puesto = " "
+                        telefono = ""
+                        activoOpc = " "
                         }
                         
                     }
@@ -39,6 +47,9 @@ struct Formulario: View{
             }
             Spacer()
         }
+    func mostrarEmp(){
+        prodArray = coreDM.listaCompletaEmp()
+    }
 }
 struct ContentView_Previews2: PreviewProvider {
     static var previews: some View {
